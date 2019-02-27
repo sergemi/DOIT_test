@@ -12,6 +12,11 @@
 		8FE02F90222700660005957B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F8E222700660005957B /* Main.storyboard */; };
 		8FE02F92222700690005957B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F91222700690005957B /* Assets.xcassets */; };
 		8FE02F95222700690005957B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F93222700690005957B /* LaunchScreen.storyboard */; };
+		8FE02F9E222713C30005957B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F9D222713C30005957B /* LoginVC.xib */; };
+		8FE02FA0222716070005957B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02F9F222716070005957B /* LoginVC.swift */; };
+		8FE02FA322272BEB0005957B /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02FA222272BEB0005957B /* UserAuth.swift */; };
+		8FE02FA522272DBB0005957B /* TasksListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02FA422272DBB0005957B /* TasksListVC.xib */; };
+		8FE02FA722272DCC0005957B /* TasksListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02FA622272DCC0005957B /* TasksListVC.swift */; };
 		E74E16106C458CB07074EC67 /* Pods_Doit_test_sergemi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A22B6B87E5053D47FD7F19D /* Pods_Doit_test_sergemi.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +31,11 @@
 		8FE02F91222700690005957B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE02F94222700690005957B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FE02F96222700690005957B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE02F9D222713C30005957B /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		8FE02F9F222716070005957B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8FE02FA222272BEB0005957B /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		8FE02FA422272DBB0005957B /* TasksListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksListVC.xib; sourceTree = "<group>"; };
+		8FE02FA622272DCC0005957B /* TasksListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 		8FE02F7E222700650005957B = {
 			isa = PBXGroup;
 			children = (
+				8FE02FA122272BCB0005957B /* Services */,
+				8FE02F9C222713A10005957B /* ViewControllers */,
 				8FE02F89222700650005957B /* Doit_test_sergemi */,
 				8FE02F88222700650005957B /* Products */,
 				69D846E48AFF18F62D09B657 /* Pods */,
@@ -86,6 +98,25 @@
 				8FE02F96222700690005957B /* Info.plist */,
 			);
 			path = Doit_test_sergemi;
+			sourceTree = "<group>";
+		};
+		8FE02F9C222713A10005957B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FE02F9D222713C30005957B /* LoginVC.xib */,
+				8FE02F9F222716070005957B /* LoginVC.swift */,
+				8FE02FA422272DBB0005957B /* TasksListVC.xib */,
+				8FE02FA622272DCC0005957B /* TasksListVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8FE02FA122272BCB0005957B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8FE02FA222272BEB0005957B /* UserAuth.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE02F95222700690005957B /* LaunchScreen.storyboard in Resources */,
+				8FE02FA522272DBB0005957B /* TasksListVC.xib in Resources */,
 				8FE02F92222700690005957B /* Assets.xcassets in Resources */,
+				8FE02F9E222713C30005957B /* LoginVC.xib in Resources */,
 				8FE02F90222700660005957B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +237,9 @@
 			files = (
 				8FE02F8D222700660005957B /* ViewController.swift in Sources */,
 				8FE02F8B222700660005957B /* AppDelegate.swift in Sources */,
+				8FE02FA722272DCC0005957B /* TasksListVC.swift in Sources */,
+				8FE02FA322272BEB0005957B /* UserAuth.swift in Sources */,
+				8FE02FA0222716070005957B /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

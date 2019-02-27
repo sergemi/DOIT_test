@@ -12,7 +12,25 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserAuth.inst.isLogged() {
+            print("logged")
+            
+            let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
+            self.present(myViewController, animated: false, completion: nil)
+        }
+        else {
+            print("Need login")
+            
+            UserAuth.inst.showLoginScreen()
+        }
+        
+//        let myViewController = LoginVC(nibName: "LoginVC", bundle: nil)
+//        self.present(myViewController, animated: false, completion: nil)
     }
 
 
