@@ -1,0 +1,10 @@
+platform :ios, '8.0'
+
+use_frameworks!
+
+target 'Doit_test_sergemi' do
+
+pod 'Alamofire'
+pod 'SwiftyJSON'
+
+end
