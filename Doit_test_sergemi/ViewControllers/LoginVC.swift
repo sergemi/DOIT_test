@@ -12,6 +12,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTF: MyTextField!
     @IBOutlet weak var passwordTF: MyTextField!
+    @IBOutlet weak var modeSwitch: UISwitch!
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    var isLoginMode: Bool = true
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,6 +53,22 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    @IBAction func modeChanged(_ sender: UISwitch) {
+        isLoginMode = sender.isOn
+        
+        let text = isLoginMode ? "LOG IN" : "REGISTER"
+        loginBtn.setTitle(text, for: .normal)
+    }
+    
+    @IBAction func onLogin(_ sender: Any) {
+        if isLoginMode {
+            print("login")
+        }
+        else {
+            print("register")
+        }
     }
     
 }
