@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskEditVC" customModule="Doit_test_sergemi" customModuleProvider="target">
             <connections>
+                <outlet property="priorityHighBtn" destination="kLO-7i-gZq" id="uy2-5u-gv2"/>
+                <outlet property="priorityLbl" destination="81K-ui-FDr" id="6sz-ng-slO"/>
+                <outlet property="priorityLowBtn" destination="78p-gM-LID" id="a1P-Oe-TW4"/>
+                <outlet property="priorityMediumBtn" destination="vzA-bu-TlM" id="bOU-jl-Dsd"/>
                 <outlet property="titleTView" destination="x29-f5-9aC" id="Hgs-B6-JeT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3KW-Bs-0OS"/>
             </connections>
@@ -56,47 +60,54 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJG-ZC-UeU" userLabel="priorityLeftHelper">
-                    <rect key="frame" x="72" y="185" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJG-ZC-UeU" userLabel="priorityLeftHelper">
+                    <rect key="frame" x="121.5" y="185" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="40" id="VJD-8A-cOJ"/>
-                        <constraint firstAttribute="height" constant="40" id="tP0-Ws-ihq"/>
+                        <constraint firstAttribute="width" constant="25" id="VJD-8A-cOJ"/>
+                        <constraint firstAttribute="height" constant="25" id="tP0-Ws-ihq"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-AY-QQL" userLabel="priorityRightHelper">
-                    <rect key="frame" x="265" y="185" width="40" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-AY-QQL" userLabel="priorityRightHelper">
+                    <rect key="frame" x="228.5" y="177.5" width="25" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Jsp-ku-Bjq"/>
                         <constraint firstAttribute="height" constant="40" id="hTh-ln-dkd"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-YK-F9Z" userLabel="grayLine2">
-                    <rect key="frame" x="40" y="235" width="295" height="1"/>
+                    <rect key="frame" x="40" y="220" width="295" height="1"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="JtX-N6-NqY"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-7i-gZq" userLabel="priorHighBtn">
-                    <rect key="frame" x="40" y="185" width="32" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-7i-gZq" userLabel="priorHighBtn">
+                    <rect key="frame" x="40" y="185" width="81.5" height="25"/>
                     <state key="normal" title="High">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="onPriorityHigh:" destination="-1" eventType="touchUpInside" id="MeU-cu-Y3m"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78p-gM-LID" userLabel="priorLowBtn">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78p-gM-LID" userLabel="priorLowBtn">
                     <rect key="frame" x="303" y="187" width="32" height="40"/>
                     <state key="normal" title="Low">
                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="onPriorityLow:" destination="-1" eventType="touchUpInside" id="1VU-nh-d7t"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzA-bu-TlM" userLabel="priorMediumBtn">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzA-bu-TlM" userLabel="priorMediumBtn">
                     <rect key="frame" x="152" y="187" width="55" height="40"/>
                     <state key="normal" title="Medium">
                         <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="onPriorityMedium:" destination="-1" eventType="touchUpInside" id="X2D-fK-Zbl"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,6 +128,7 @@
                 <constraint firstItem="78p-gM-LID" firstAttribute="centerY" secondItem="eJG-ZC-UeU" secondAttribute="centerY" id="Pfv-7A-7de"/>
                 <constraint firstItem="vzA-bu-TlM" firstAttribute="trailing" secondItem="GNb-AY-QQL" secondAttribute="leading" id="RJ3-9v-huZ"/>
                 <constraint firstItem="vzA-bu-TlM" firstAttribute="leading" secondItem="eJG-ZC-UeU" secondAttribute="trailing" id="UYa-aP-wrU"/>
+                <constraint firstItem="78p-gM-LID" firstAttribute="width" secondItem="vzA-bu-TlM" secondAttribute="width" id="WcF-RB-hfJ"/>
                 <constraint firstItem="81K-ui-FDr" firstAttribute="leading" secondItem="yPq-aC-4M5" secondAttribute="leading" id="X3h-q5-Drf"/>
                 <constraint firstItem="78p-gM-LID" firstAttribute="trailing" secondItem="SHs-YK-F9Z" secondAttribute="trailing" id="ZQ1-5z-QV9"/>
                 <constraint firstItem="eJG-ZC-UeU" firstAttribute="bottom" secondItem="SHs-YK-F9Z" secondAttribute="top" constant="-10" id="amM-qR-c3a"/>
@@ -127,8 +139,9 @@
                 <constraint firstItem="yPq-aC-4M5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="igh-Df-SFF"/>
                 <constraint firstItem="frK-sa-X08" firstAttribute="trailing" secondItem="yPq-aC-4M5" secondAttribute="trailing" id="klh-hj-gre"/>
                 <constraint firstItem="vzA-bu-TlM" firstAttribute="centerY" secondItem="eJG-ZC-UeU" secondAttribute="centerY" id="t0F-NC-ocb"/>
+                <constraint firstItem="kLO-7i-gZq" firstAttribute="width" secondItem="vzA-bu-TlM" secondAttribute="width" id="tRq-3R-5DL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yPq-aC-4M5" secondAttribute="trailing" constant="40" id="txi-se-jbC"/>
-                <constraint firstItem="SHs-YK-F9Z" firstAttribute="top" secondItem="81K-ui-FDr" secondAttribute="bottom" constant="60" id="uEu-Hz-Xz0"/>
+                <constraint firstItem="SHs-YK-F9Z" firstAttribute="top" secondItem="81K-ui-FDr" secondAttribute="bottom" constant="45" id="uEu-Hz-Xz0"/>
                 <constraint firstItem="78p-gM-LID" firstAttribute="height" secondItem="eJG-ZC-UeU" secondAttribute="height" id="vun-CI-j1V"/>
                 <constraint firstItem="81K-ui-FDr" firstAttribute="trailing" secondItem="yPq-aC-4M5" secondAttribute="trailing" id="xLX-Xh-EZS"/>
             </constraints>

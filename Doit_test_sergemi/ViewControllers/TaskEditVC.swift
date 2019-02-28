@@ -12,7 +12,13 @@ class TaskEditVC : UIViewController {
     
     @IBOutlet weak var titleTView: UITextView!
     
+    @IBOutlet weak var priorityLbl: UILabel!
+    @IBOutlet weak var priorityHighBtn: UIButton!
+    @IBOutlet weak var priorityMediumBtn: UIButton!
+    @IBOutlet weak var priorityLowBtn: UIButton!
+    
     var isNew: Bool = false
+    var priority: String = ""
     
     convenience init(id: Int) {
         self.init()
@@ -33,8 +39,40 @@ class TaskEditVC : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        titleTView.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
-        titleTView.layer.borderWidth = 0.5
+        func addRect(control: UIView) {
+            control.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+            control.layer.borderWidth = 0.5
+        }
+        
+        addRect(control: titleTView)
+        addRect(control: priorityHighBtn)
+        addRect(control: priorityMediumBtn)
+        addRect(control: priorityLowBtn)
     }
+    
+    func updatePriorLbl() {
+        if priority == "" {
+            priorityLbl.text = "Priority"
+        }
+        else {
+            priorityLbl.text = "Priority: " + priority
+        }
+    }
+    
+    @IBAction func onPriorityHigh(_ sender: Any) {
+        priority = "High"
+        updatePriorLbl()
+    }
+    
+    @IBAction func onPriorityMedium(_ sender: Any) {
+        priority = "Medium"
+        updatePriorLbl()
+    }
+    
+    @IBAction func onPriorityLow(_ sender: Any) {
+        priority = "Low"
+        updatePriorLbl()
+    }
+    
     
 }
