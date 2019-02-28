@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F44772922274EDF003311FB /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44772822274EDF003311FB /* MyTextField.swift */; };
 		8FE02F8B222700660005957B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02F8A222700650005957B /* AppDelegate.swift */; };
 		8FE02F8D222700660005957B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02F8C222700660005957B /* ViewController.swift */; };
 		8FE02F90222700660005957B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F8E222700660005957B /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		0A22B6B87E5053D47FD7F19D /* Pods_Doit_test_sergemi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doit_test_sergemi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCA10E1898AFF2DD4A9B932 /* Pods-Doit_test_sergemi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doit_test_sergemi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Doit_test_sergemi/Pods-Doit_test_sergemi.release.xcconfig"; sourceTree = "<group>"; };
 		511A72BAB614F5D1FBABBE7B /* Pods-Doit_test_sergemi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doit_test_sergemi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doit_test_sergemi/Pods-Doit_test_sergemi.debug.xcconfig"; sourceTree = "<group>"; };
+		8F44772822274EDF003311FB /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		8FE02F87222700650005957B /* Doit_test_sergemi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doit_test_sergemi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE02F8A222700650005957B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE02F8C222700660005957B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,9 +69,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8F44772722274E68003311FB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8F44772822274EDF003311FB /* MyTextField.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		8FE02F7E222700650005957B = {
 			isa = PBXGroup;
 			children = (
+				8F44772722274E68003311FB /* UI */,
 				8FE02FA122272BCB0005957B /* Services */,
 				8FE02F9C222713A10005957B /* ViewControllers */,
 				8FE02F89222700650005957B /* Doit_test_sergemi */,
@@ -238,6 +249,7 @@
 				8FE02F8D222700660005957B /* ViewController.swift in Sources */,
 				8FE02F8B222700660005957B /* AppDelegate.swift in Sources */,
 				8FE02FA722272DCC0005957B /* TasksListVC.swift in Sources */,
+				8F44772922274EDF003311FB /* MyTextField.swift in Sources */,
 				8FE02FA322272BEB0005957B /* UserAuth.swift in Sources */,
 				8FE02FA0222716070005957B /* LoginVC.swift in Sources */,
 			);
