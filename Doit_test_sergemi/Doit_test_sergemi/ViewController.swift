@@ -20,8 +20,10 @@ class ViewController: UIViewController {
         if UserAuth.inst.isLogged() {
             print("logged")
             
-            let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
-            self.present(myViewController, animated: false, completion: nil)
+            UserAuth.inst.showTasksListScreen()
+            
+//            let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
+//            self.present(myViewController, animated: false, completion: nil)
         }
         else {
             print("Need login")

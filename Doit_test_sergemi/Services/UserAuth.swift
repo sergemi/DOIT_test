@@ -32,16 +32,13 @@ class UserAuth:NSObject {
     }
     
     func showTasksListScreen() {
-        if var topController = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
-            }
-            
-            let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
-            topController.present(myViewController, animated: false, completion: nil)
-            
-            
-        }
+        let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
+        let navController = UINavigationController(rootViewController: myViewController)
+        
+        let window = UIApplication.shared.keyWindow
+        
+        window?.makeKeyAndVisible()
+        window?.rootViewController = navController        
     }
     
     func isLogged() -> Bool {

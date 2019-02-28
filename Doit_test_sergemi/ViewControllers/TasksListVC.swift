@@ -14,14 +14,22 @@ class TasksListVC: UIViewController {
     @IBOutlet weak var plusBtn: UIButton!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "My tasks"
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         plusBtn.layer.cornerRadius = 20
     }
     
+    
     @IBAction func onPlusBtn(_ sender: Any) {
-        print("onPlusBtn")
+        let vc = TaskEditVC(id: -1)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

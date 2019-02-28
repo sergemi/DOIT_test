@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F44772922274EDF003311FB /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44772822274EDF003311FB /* MyTextField.swift */; };
 		8F44772B2227DDAC003311FB /* NetMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44772A2227DDAC003311FB /* NetMgr.swift */; };
+		8F44772D2228487B003311FB /* TaskEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44772C2228487B003311FB /* TaskEditVC.swift */; };
+		8F44772F222848C2003311FB /* TaskEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F44772E222848C2003311FB /* TaskEditVC.xib */; };
 		8FE02F8B222700660005957B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02F8A222700650005957B /* AppDelegate.swift */; };
 		8FE02F8D222700660005957B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE02F8C222700660005957B /* ViewController.swift */; };
 		8FE02F90222700660005957B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE02F8E222700660005957B /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		511A72BAB614F5D1FBABBE7B /* Pods-Doit_test_sergemi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doit_test_sergemi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Doit_test_sergemi/Pods-Doit_test_sergemi.debug.xcconfig"; sourceTree = "<group>"; };
 		8F44772822274EDF003311FB /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		8F44772A2227DDAC003311FB /* NetMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMgr.swift; sourceTree = "<group>"; };
+		8F44772C2228487B003311FB /* TaskEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditVC.swift; sourceTree = "<group>"; };
+		8F44772E222848C2003311FB /* TaskEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskEditVC.xib; sourceTree = "<group>"; };
 		8FE02F87222700650005957B /* Doit_test_sergemi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doit_test_sergemi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE02F8A222700650005957B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE02F8C222700660005957B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			children = (
 				8FE02F9D222713C30005957B /* LoginVC.xib */,
 				8FE02F9F222716070005957B /* LoginVC.swift */,
+				8F44772C2228487B003311FB /* TaskEditVC.swift */,
+				8F44772E222848C2003311FB /* TaskEditVC.xib */,
 				8FE02FA422272DBB0005957B /* TasksListVC.xib */,
 				8FE02FA622272DCC0005957B /* TasksListVC.swift */,
 			);
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE02F95222700690005957B /* LaunchScreen.storyboard in Resources */,
+				8F44772F222848C2003311FB /* TaskEditVC.xib in Resources */,
 				8FE02FA522272DBB0005957B /* TasksListVC.xib in Resources */,
 				8FE02F92222700690005957B /* Assets.xcassets in Resources */,
 				8FE02F9E222713C30005957B /* LoginVC.xib in Resources */,
@@ -251,6 +258,7 @@
 			files = (
 				8FE02F8D222700660005957B /* ViewController.swift in Sources */,
 				8FE02F8B222700660005957B /* AppDelegate.swift in Sources */,
+				8F44772D2228487B003311FB /* TaskEditVC.swift in Sources */,
 				8FE02FA722272DCC0005957B /* TasksListVC.swift in Sources */,
 				8F44772922274EDF003311FB /* MyTextField.swift in Sources */,
 				8FE02FA322272BEB0005957B /* UserAuth.swift in Sources */,
