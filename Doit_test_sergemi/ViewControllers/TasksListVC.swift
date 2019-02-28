@@ -10,4 +10,18 @@ import UIKit
 
 class TasksListVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var plusBtn: UIButton!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        plusBtn.layer.cornerRadius = 20
+    }
+    
+    @IBAction func onPlusBtn(_ sender: Any) {
+        print("onPlusBtn")
+    }
+    
 }
