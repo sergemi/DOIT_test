@@ -63,11 +63,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onLogin(_ sender: Any) {
-        if isLoginMode {
-            print("login")
-        }
-        else {
-            print("register")
+        if let email = emailTF.text, let password = passwordTF.text {
+            if isLoginMode {
+                NetMgr.inst.loginUser(email: email, password: password, onSuccess: {
+                    
+                })
+            }
+            else {
+                NetMgr.inst.registerUser(email: email, password: password, onSuccess: {
+                    
+                })
+            }
         }
     }
     

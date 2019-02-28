@@ -31,11 +31,28 @@ class UserAuth:NSObject {
         }
     }
     
+    func showTasksListScreen() {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            let myViewController = TasksListVC(nibName: "TasksListVC", bundle: nil)
+            topController.present(myViewController, animated: false, completion: nil)
+            
+            
+        }
+    }
+    
     func isLogged() -> Bool {
 //        return false
 //        return true
         
         return UserDefaults.standard.object(forKey: UserAuth.tokenKeyName) != nil
+    }
+    
+    func setToken(token: String) {
+        UserDefaults.standard.set(token, forKey: UserAuth.tokenKeyName)
     }
     
 }
