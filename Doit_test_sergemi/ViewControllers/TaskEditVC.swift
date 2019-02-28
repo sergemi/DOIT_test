@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskEditVC : UIViewController {
+class TaskEditVC : UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var titleTView: UITextView!
     
@@ -16,6 +16,8 @@ class TaskEditVC : UIViewController {
     @IBOutlet weak var priorityHighBtn: UIButton!
     @IBOutlet weak var priorityMediumBtn: UIButton!
     @IBOutlet weak var priorityLowBtn: UIButton!
+    
+    @IBOutlet weak var addTaskBtn: UIButton!
     
     var isNew: Bool = false
     var priority: String = ""
@@ -48,6 +50,18 @@ class TaskEditVC : UIViewController {
         addRect(control: priorityHighBtn)
         addRect(control: priorityMediumBtn)
         addRect(control: priorityLowBtn)
+        
+        titleTView.delegate = self
+        
+        if isNew {
+            updateAddTaskBtnVisibility()
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if isNew {
+            updateAddTaskBtnVisibility()
+        }
     }
     
     func updatePriorLbl() {
@@ -56,6 +70,10 @@ class TaskEditVC : UIViewController {
         }
         else {
             priorityLbl.text = "Priority: " + priority
+        }
+        
+        if isNew {
+            updateAddTaskBtnVisibility()
         }
     }
     
@@ -74,5 +92,19 @@ class TaskEditVC : UIViewController {
         updatePriorLbl()
     }
     
+    @IBAction func onAddTask(_ sender: Any) {
+        print("onAddTask")
+    }
+    
+    func updateAddTaskBtnVisibility() {
+        if titleTView.text.count == 0 ||
+            priority.count == 0
+        {
+            addTaskBtn.isHidden = true
+        }
+        else {
+            addTaskBtn.isHidden = false
+        }
+    }
     
 }

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskEditVC" customModule="Doit_test_sergemi" customModuleProvider="target">
             <connections>
+                <outlet property="addTaskBtn" destination="w02-Zz-qO3" id="acS-Gc-hfz"/>
                 <outlet property="priorityHighBtn" destination="kLO-7i-gZq" id="uy2-5u-gv2"/>
                 <outlet property="priorityLbl" destination="81K-ui-FDr" id="6sz-ng-slO"/>
                 <outlet property="priorityLowBtn" destination="78p-gM-LID" id="a1P-Oe-TW4"/>
@@ -100,6 +101,19 @@
                         <action selector="onPriorityLow:" destination="-1" eventType="touchUpInside" id="1VU-nh-d7t"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w02-Zz-qO3" userLabel="AddTaskBtn">
+                    <rect key="frame" x="40" y="587" width="295" height="40"/>
+                    <color key="backgroundColor" white="0.91999615492170006" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="l5F-PJ-mSR"/>
+                    </constraints>
+                    <state key="normal" title="Add task">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onAddTask:" destination="-1" eventType="touchUpInside" id="7Tr-Bh-7B6"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzA-bu-TlM" userLabel="priorMediumBtn">
                     <rect key="frame" x="152" y="187" width="55" height="40"/>
                     <state key="normal" title="Medium">
@@ -113,6 +127,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="frK-sa-X08" firstAttribute="leading" secondItem="yPq-aC-4M5" secondAttribute="leading" id="1L9-j7-aMZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="w02-Zz-qO3" secondAttribute="bottom" constant="40" id="2E0-4T-Frh"/>
                 <constraint firstItem="kLO-7i-gZq" firstAttribute="leading" secondItem="SHs-YK-F9Z" secondAttribute="leading" id="2eM-QS-LWy"/>
                 <constraint firstItem="SHs-YK-F9Z" firstAttribute="trailing" secondItem="frK-sa-X08" secondAttribute="trailing" id="2ql-al-14S"/>
                 <constraint firstItem="vzA-bu-TlM" firstAttribute="height" secondItem="eJG-ZC-UeU" secondAttribute="height" id="4Fp-eL-Ewa"/>
@@ -132,9 +147,11 @@
                 <constraint firstItem="81K-ui-FDr" firstAttribute="leading" secondItem="yPq-aC-4M5" secondAttribute="leading" id="X3h-q5-Drf"/>
                 <constraint firstItem="78p-gM-LID" firstAttribute="trailing" secondItem="SHs-YK-F9Z" secondAttribute="trailing" id="ZQ1-5z-QV9"/>
                 <constraint firstItem="eJG-ZC-UeU" firstAttribute="bottom" secondItem="SHs-YK-F9Z" secondAttribute="top" constant="-10" id="amM-qR-c3a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w02-Zz-qO3" secondAttribute="trailing" constant="40" id="asg-pl-dQ8"/>
                 <constraint firstItem="81K-ui-FDr" firstAttribute="top" secondItem="frK-sa-X08" secondAttribute="bottom" constant="10" id="cT4-03-Xjf"/>
                 <constraint firstItem="kLO-7i-gZq" firstAttribute="trailing" secondItem="eJG-ZC-UeU" secondAttribute="leading" id="fdm-DP-ioI"/>
                 <constraint firstItem="SHs-YK-F9Z" firstAttribute="leading" secondItem="frK-sa-X08" secondAttribute="leading" id="fnx-qK-dz9"/>
+                <constraint firstItem="w02-Zz-qO3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="hIq-Jg-VD5"/>
                 <constraint firstItem="x29-f5-9aC" firstAttribute="top" secondItem="yPq-aC-4M5" secondAttribute="bottom" constant="10" id="hYC-pE-s8A"/>
                 <constraint firstItem="yPq-aC-4M5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="igh-Df-SFF"/>
                 <constraint firstItem="frK-sa-X08" firstAttribute="trailing" secondItem="yPq-aC-4M5" secondAttribute="trailing" id="klh-hj-gre"/>
