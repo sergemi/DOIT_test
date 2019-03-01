@@ -66,5 +66,37 @@ class NetMgr:NSObject {
             }
         }
     }
+    
+    func newTask(title: String, priotity: String, onSuccess success: @escaping () -> Void) {
+        let url = baseURL + "/tasks"
+        
+        let params = [
+            "title": "title",
+            "dueBy": "1549477494", // temp
+            "priotity": "High"
+        ]
+        
+        let token = UserAuth.inst.getToken()
+        if token == nil {
+            return
+        }
+        
+        let headers = [//"Content-Type" : "application/json",
+                       //"accept": "application/json",
+                       "token": token!,
+                       "Authorization": token!
+        ]
+        
+        request(url, method: .post, parameters: params, headers:headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+//                guard let jsonArray = value as? [String: Any] else { return }
+                print(value)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 
 }

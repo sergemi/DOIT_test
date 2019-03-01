@@ -94,6 +94,10 @@ class TaskEditVC : UIViewController, UITextViewDelegate {
     
     @IBAction func onAddTask(_ sender: Any) {
         print("onAddTask")
+        
+        NetMgr.inst.newTask(title: titleTView.text!, priotity: priority, onSuccess: {
+          print("sucess handler")
+        })
     }
     
     func updateAddTaskBtnVisibility() {

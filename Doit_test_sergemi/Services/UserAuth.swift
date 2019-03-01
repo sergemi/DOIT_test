@@ -52,4 +52,12 @@ class UserAuth:NSObject {
         UserDefaults.standard.set(token, forKey: UserAuth.tokenKeyName)
     }
     
+    func getToken() -> String? {
+        let token = UserDefaults.standard.object(forKey: UserAuth.tokenKeyName)
+        if token is String {
+            return token as! String
+        }
+        return nil
+    }
+    
 }
